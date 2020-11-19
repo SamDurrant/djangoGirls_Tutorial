@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h2,
+h1 a,
+h2 a {
+  color: #aad1c9;
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header {
+  background: #369669;
+  text-align: center;
+  padding: 1rem;
+}
+
+section {
+  margin: 2rem auto;
+  width: 70%;
+  max-width: 1000px;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.post_date {
+  color: #21554a;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.post_content {
+  letter-spacing: 1px;
+}
