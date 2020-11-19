@@ -6,6 +6,11 @@
   </head>
   <body>
     <div class="header">
+    {% if user.is_authenticated %}
+    <a href={% url 'post_new' %}>
+      <button class='post_button'>add new post</button>
+    </a>
+    {% endif %}
       <h1><a href="/">Sam's Spectacular Blog</a></h1>
     </div>
     <section>{% block content %} {% endblock %}</section>
