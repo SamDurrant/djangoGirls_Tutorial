@@ -3,67 +3,17 @@
     <title>Sam's blog</title>
   </head>
   <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <div>
+      <h1><a href="/">Sam's Spectacular Blog</a></h1>
+    </div>
     <section>
-      <p>published: 14.06.2020, 12:14</p>
-      <h2><a href="">My first post</a></h2>
-      <p>
-        Beekeeping east-west mala beads, biomat crystalline. Midwifery ganja
-        soothing vibrations tofu quantum ponytail downward dog, contact improv
-        surrender. Psychic fractal nature of on the playa asana, all-natural
-        tripping on gifting circle animal totem essential oils. Himalayan sea
-        salt gestalt yoni, sharing goddess mayan calendar breathwork Dr.
-        Bronner's folk remedy vegan. Maypole twelfth house native american
-        ancestry float tank bodyworker forest free tibet, one taste beltane
-        astrological. Marijuana soulmate new paradigm didgeridoo non-duality
-        geodesic dome, past life embodied marinese.
-      </p>
-      <p>
-        Double rainbow yerba matte fertility awareness workshop Whole Earth
-        Catalog gestalt, indigenous elders bioneers contact improv Harbin
-        ancient chinese wisdom. Ponytail with a dash of cayenne pepper kirtan
-        veganism multi-dimensional ganja, saturn return spiritual. Dreamwork
-        embodied leave no trace, earth cosmic. Henna tattoo combined energy
-        fields paleo diet higher cosmic force, salvia kundalini my brothers and
-        sisters juicy mind altering.
-      </p>
-    </section>
-    <section>
-      <p>published: 23.05.2020, 12:14</p>
-      <h2><a href="">My second post</a></h2>
-      <p>
-        Patchouli human potential psilocybin solstice apple cider vinegar,
-        contact improv continuum mayan calendar higher cosmic force. Morphic
-        resonance talking stick didgeridoo light energy, papyrus font master
-        nudist harmony. Dakini acroyoga cosmic cold plunge massage therapist
-        spiral dynamics kale chips, astrological fluorescent lights. Paleo diet
-        tripping on life coach doula loving kindness, open-minded nectar
-        craniosacral therapy lingham kapha imbalance. Papasan reprogramming your
-        DNA wicca, mendocino tai chi trust the process geodesic dome seaweed
-        tempeh yerba matte fertility awareness clarity.
-      </p>
-      <p>
-        Chia seeds peace continuum, manifestation acai berries. Patchouli Bay
-        Area discovering valuable truths with a dash of cayenne pepper third
-        eye, spiral dynamics shamanic ceremony folk music. Popcorn with brewers
-        yeast singing bowl therapy ceremonial-grade, shanti wicca five rhythms
-        taurus diva cup. Entheogen dakini psilocybin retreat, authentic self
-        dreamwork apple cider vinegar holographic resonance the wisdom of your
-        body bentonite clay mendo.
-      </p>
-      <p>
-        Harbin gluten-free fertility awareness, taurus surrender hexayurt.
-        Planetary transition blue whale with a dash of cayenne pepper watsu
-        native american ancestry gifting circle dakini massage therapist,
-        medical marijuana optimal frequency communal. Hacky sack continuum
-        earth, papasan tofurkey. Herbal ganja barefoot running, divine peace
-        tripping on hemp seed psilocybin. Discovering valuable truths indigenous
-        elders reconnect microfestival the wisdom of your body, nonprofit aho
-        vinyasa goddess indigo child. Animal totem asana emotional release,
-        closing circle the dali lama tofu reproductive system. Yogic infinite
-        blessings retreat acroyoga, ecofriendly co-create. Namaste.
-      </p>
+      {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+      {% endfor %}
     </section>
   </body>
 </html>
