@@ -1,19 +1,7 @@
-<html>
-  <head>
-    <title>Sam's blog</title>
-  </head>
-  <body>
-    <div>
-      <h1><a href="/">Sam's Spectacular Blog</a></h1>
-    </div>
-    <section>
-      {% for post in posts %}
-      <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-      </div>
-      {% endfor %}
-    </section>
-  </body>
-</html>
+{% extends 'blog/base.html' %} {% block content %} {% for post in posts %}
+<div class="post">
+  <p class="post_date">published: {{ post.published_date }}</p>
+  <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+  <p class="post_content">{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %} {% endblock %}
