@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% if forms.errors %}
+        Your username and password did not match. Please try again.
+    {% endif %}
+
+    <form class="form form_center" method='post' action='{% url 'login' %}'>
+      {% csrf_token %}
+      <p>
+        {{ form.username.label_tag }}
+        {{ form.username }}
+      </p>
+      <p>
+        {{ form.password.label_tag }}
+        {{ form.password }}
+      </p>
+      <p>
+        <input type='submit' value='login' />
+        <input type='hidden' name='next' value='{{ next }}' />
+      </p>
+    </form>
+{% endblock  %}
