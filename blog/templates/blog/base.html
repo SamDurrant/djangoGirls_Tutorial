@@ -14,7 +14,7 @@
       <a href={% url 'post_draft_list' %}>
         <button class='post_button'>drafts</button>
       </a>
-      <small><a href="{% url 'logout' %}" class='button_text'>Log out</a></small>
+      <a href="{% url 'logout' %}" class='button_text'>Log out</a>
     {% else %}
       <a href={% url 'login' %}>
         <button class='post_button'>login</button>

@@ -46,7 +46,9 @@ section {
 }
 
 .post {
+  padding: 0 1rem;
   margin-bottom: 2rem;
+  border-bottom: 1px solid #aad1c9;
 }
 
 .post_date {
@@ -141,6 +143,21 @@ section {
   background: none;
 }
 
+.button_margin {
+  margin: 1rem 0;
+}
+
+.button_margin:hover {
+  color: #369669;
+}
+
+.comment_button_box {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin-left: auto;
+}
+
 .form textarea {
   height: 300px;
   padding: 5px 10px;
@@ -149,4 +166,17 @@ section {
 
 .form button {
   margin-left: auto;
+}
+
+.comment {
+  border: 1px solid #aad1c9;
+  margin: 1rem 0 1rem 4rem;
+  padding: 1rem 2rem;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.comment_text {
+  color: #5d998b;
+  text-align: left;
 }
